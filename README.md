@@ -528,7 +528,7 @@ Invoke-Mimikatz -Command '"lsadump::lsa /patch"' -Computername <computername>
 
 # Domain persistence
 ## Golden ticket
-Golden tickets zijn nagemaakte TGT tickets. TGT tickets worden gebruikt om TGS tickets aan te vragen bij de KDC(DC). De kerberos Golden Ticket is een valid TGT omdat deze ondertekend is door het KRBTGT account. Als je de hash van de KRBTGT account kan achterhalen door de hashes te dumpen op de Domain controller en deze hash niet wijzigt is het mogelijk om weer een TGT aan te vragen bij de volgende penetratietest en volledige toegang tot het domein te verkrijgen.
+We use the Hash of the krbtgt account to forge our own TGT for whatever resource we want.
 
 https://ired.team/offensive-security-experiments/active-directory-kerberos-abuse/kerberos-golden-tickets
 
